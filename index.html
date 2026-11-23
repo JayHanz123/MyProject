@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>agriStore Ghana — Storage for a Stronger Harvest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="brand" data-view="landing">
+      <span class="brand-icon"><i class="fa-solid fa-seedling"></i></span>
+      <span class="brand-text">
+        <strong>agriStore</strong> <em>Ghana</em>
+        <small>storage for a stronger harvest</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks"></nav>
+    <div class="nav-actions" id="navActions"></div>
+    <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== LANDING ========== -->
+<section class="view" id="view-landing">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div>
+        <span class="pill"><i class="fa-solid fa-shield-halved"></i> Verified warehouses across Ghana</span>
+        <h1>Find <span class="grad">safe, available</span> warehouse space for your harvest.</h1>
+        <p class="lede">Compare storage options, book in seconds, and track every update — all in one platform built for Ghanaian farmers.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" data-view="auth" data-tab="signup"><i class="fa-solid fa-user-plus"></i> Create free account</button>
+          <button class="btn btn-outline btn-lg" data-view="warehouses"><i class="fa-solid fa-warehouse"></i> Browse warehouses</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong>10</strong><span>Verified warehouses</span></div>
+          <div><strong>10</strong><span>Regions covered</span></div>
+          <div><strong>24/7</strong><span>On-site security</span></div>
+        </div>
+      </div>
+      <div class="glass hero-card">
+        <h3 style="margin-bottom:18px"><i class="fa-solid fa-bolt" style="color:var(--gold-500)"></i> Why agriStore</h3>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-circle-check"></i> Compare prices & features instantly</li>
+          <li><i class="fa-solid fa-circle-check"></i> Book from any device, any time</li>
+          <li><i class="fa-solid fa-circle-check"></i> Track every status update live</li>
+          <li><i class="fa-solid fa-circle-check"></i> Real photos of every warehouse</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding:60px 24px">
+    <div class="section-head"><h2>How it works</h2><p>Three simple steps from harvest to safe storage.</p></div>
+    <div class="steps">
+      <div class="step glass"><span class="step-num">01</span><i class="fa-solid fa-magnifying-glass"></i><h3>Find & compare</h3><p>Search verified warehouses. Filter by region and price. Compare up to 3 side by side.</p></div>
+      <div class="step glass"><span class="step-num">02</span><i class="fa-solid fa-calendar-check"></i><h3>Request booking</h3><p>Choose your dates and tonnage. Send your request directly to the warehouse.</p></div>
+      <div class="step glass"><span class="step-num">03</span><i class="fa-solid fa-chart-line"></i><h3>Track updates</h3><p>Watch your booking move from Pending → Confirmed → Stored → Released.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AUTH ========== -->
+<section class="view hidden" id="view-auth">
+  <div class="container" style="padding:48px 24px">
+    <div class="auth-grid">
+      <div class="auth-side">
+        <div>
+          <div class="brand" style="margin-bottom:32px">
+            <span class="brand-icon" style="background:rgba(255,255,255,.15)"><i class="fa-solid fa-seedling"></i></span>
+            <span class="brand-text"><strong style="color:#fff">agriStore</strong> <em>Ghana</em></span>
+          </div>
+          <h2>Storage for a stronger harvest.</h2>
+          <p>Join farmers across Ghana protecting their produce in verified, safe warehouses.</p>
+          <ul class="auth-features">
+            <li><i class="fa-solid fa-circle-check"></i> 10 verified warehouses</li>
+            <li><i class="fa-solid fa-circle-check"></i> Compare & book instantly</li>
+            <li><i class="fa-solid fa-circle-check"></i> Real-time booking tracker</li>
+            <li><i class="fa-solid fa-circle-check"></i> Encrypted account passwords</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="auth-form-wrap">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-authtab="login">Sign in</button>
+          <button class="auth-tab" data-authtab="signup">Create account</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <h3>Welcome back</h3>
+          <p class="auth-sub">Sign in to manage your bookings.</p>
+          <label class="field"><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+          <label class="field"><span>Password</span>
+            <div class="pw-wrap"><input type="password" name="password" placeholder="Your password" required><button type="button" class="pw-toggle"><i class="fa-solid fa-eye"></i></button></div>
+          </label>
+          <div class="auth-error" id="loginError"></div>
+          <button type="submit" class="btn btn-primary full btn-lg"><i class="fa-solid fa-right-to-bracket"></i> Sign in</button>
+          <p class="auth-switch">No account? <a href="#" data-authtab="signup">Create one</a></p>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+          <h3>Create your account</h3>
+          <p class="auth-sub">Start storing your harvest safely today.</p>
+          <label class="field"><span>Full name</span><input type="text" name="name" placeholder="e.g. Kofi Mensah" required></label>
+          <label class="field"><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+          <label class="field"><span>Phone number</span><input type="tel" name="phone" placeholder="e.g. 024 123 4567" required></label>
+          <label class="field"><span>Password</span>
+            <div class="pw-wrap"><input type="password" name="password" placeholder="Min 8 chars, 1 uppercase, 1 number" required><button type="button" class="pw-toggle"><i class="fa-solid fa-eye"></i></button></div>
+            <div class="pw-strength" id="pwStrength"><span></span></div>
+          </label>
+          <label class="field"><span>Confirm password</span><input type="password" name="confirm" placeholder="Repeat password" required></label>
+          <div class="auth-error" id="signupError"></div>
+          <button type="submit" class="btn btn-primary full btn-lg"><i class="fa-solid fa-user-plus"></i> Create account</button>
+          <p class="auth-switch">Already have an account? <a href="#" data-authtab="login">Sign in</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WAREHOUSES ========== -->
+<section class="view hidden" id="view-warehouses">
+  <div class="container" style="padding:40px 24px">
+    <div class="section-head">
+      <h1>Browse warehouses</h1>
+      <p>Compare prices, features, and capacity. Sign in to request a booking.</p>
+    </div>
+
+    <div class="filter-bar glass">
+      <label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="searchInput" placeholder="Search warehouse, city or region…"></label>
+      <select id="regionFilter"><option value="">All regions</option></select>
+      <select id="sortFilter">
+        <option value="recommended">Sort: Recommended</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="capacity-desc">Capacity: Large first</option>
+        <option value="rating-desc">Rating: Highest</option>
+      </select>
+      <button class="btn btn-ghost" id="favoritesToggle"><i class="fa-regular fa-heart"></i> Favorites (<span id="favCount">0</span>)</button>
+      <button class="btn btn-ghost" id="clearFiltersBtn"><i class="fa-solid fa-eraser"></i> Clear</button>
+    </div>
+
+    <div id="compareTray" class="compare-tray glass hidden"></div>
+
+    <div class="warehouse-grid" id="warehouseGrid"></div>
+
+    <div class="empty-state hidden" id="noResults">
+      <i class="fa-solid fa-box-open"></i>
+      <h3>No warehouses match your filters</h3>
+      <p>Try clearing the search or picking a different region.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DASHBOARD ========== -->
+<section class="view hidden" id="view-dashboard">
+  <div class="dash-layout">
+    <aside class="dash-sidebar">
+      <div class="dash-user">
+        <span class="avatar-lg" id="userAvatar">—</span>
+        <div><strong id="userName">—</strong><small id="userEmail">—</small></div>
+      </div>
+      <nav class="dash-nav">
+        <a href="#" class="dash-link active" data-dashtab="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+        <a href="#" class="dash-link" data-dashtab="bookings"><i class="fa-solid fa-clipboard-list"></i> My bookings</a>
+        <a href="#" class="dash-link" data-view="warehouses"><i class="fa-solid fa-warehouse"></i> Browse warehouses</a>
+        <a href="#" class="dash-link" data-dashtab="profile"><i class="fa-solid fa-user-gear"></i> Profile settings</a>
+      </nav>
+      <button class="btn btn-ghost full" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </aside>
+
+    <div class="dash-main">
+      <div class="dash-panel" id="dash-overview">
+        <div class="dash-head"><h1>Welcome back, <span id="firstName">—</span></h1><p>Here's your storage activity.</p></div>
+        <div class="stat-grid" id="userStatGrid"></div>
+        <div class="dash-section">
+          <div class="section-head split">
+            <div><h2>Recent bookings</h2><p>Your latest requests.</p></div>
+            <button class="btn btn-ghost" data-dashtab="bookings">View all <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="booking-list glass" id="recentBookings"></div>
+        </div>
+      </div>
+
+      <div class="dash-panel hidden" id="dash-bookings">
+        <div class="dash-head"><h1>My bookings</h1><p>Track every storage request.</p></div>
+        <div class="glass" style="overflow:hidden">
+          <div class="tracker-tabs" id="trackerTabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="pending">Pending</button>
+            <button class="tab" data-filter="confirmed">Confirmed</button>
+            <button class="tab" data-filter="stored">Stored</button>
+            <button class="tab" data-filter="released">Released</button>
+            <button class="tab" data-filter="cancelled">Cancelled</button>
+          </div>
+          <div class="booking-list" id="allBookings"></div>
+          <div class="empty-state hidden" id="noBookings">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h3>No bookings yet</h3>
+            <p>Browse warehouses and request your first booking.</p>
+            <button class="btn btn-primary" style="margin-top:16px" data-view="warehouses"><i class="fa-solid fa-warehouse"></i> Browse warehouses</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-panel hidden" id="dash-profile">
+        <div class="dash-head"><h1>Profile settings</h1><p>Manage your account.</p></div>
+        <div class="glass profile-card">
+          <h2><i class="fa-solid fa-user"></i> Account information</h2>
+          <form id="profileForm" class="form">
+            <label class="field"><span>Full name</span><input type="text" name="name" required></label>
+            <label class="field"><span>Email (cannot change)</span><input type="email" name="email" disabled></label>
+            <label class="field"><span>Phone</span><input type="tel" name="phone" required></label>
+            <div class="auth-error" id="profileError"></div>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+          </form>
+        </div>
+        <div class="glass profile-card">
+          <h2><i class="fa-solid fa-lock"></i> Change password</h2>
+          <form id="passwordForm" class="form">
+            <label class="field"><span>Current password</span><input type="password" name="current" required></label>
+            <label class="field"><span>New password</span><input type="password" name="newPass" required></label>
+            <label class="field"><span>Confirm new password</span><input type="password" name="confirmPass" required></label>
+            <div class="auth-error" id="passwordError"></div>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-key"></i> Update password</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ADMIN ========== -->
+<section class="view hidden" id="view-admin">
+  <div class="dash-layout">
+    <aside class="dash-sidebar">
+      <div class="dash-user">
+        <span class="avatar-lg admin">AD</span>
+        <div><strong>Administrator</strong><small>agriStore Ghana</small></div>
+      </div>
+      <nav class="dash-nav">
+        <a href="#" class="dash-link active" data-admintab="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+        <a href="#" class="dash-link" data-admintab="bookings"><i class="fa-solid fa-clipboard-list"></i> All bookings</a>
+        <a href="#" class="dash-link" data-admintab="users"><i class="fa-solid fa-users"></i> Users</a>
+        <a href="#" class="dash-link" data-view="dashboard"><i class="fa-solid fa-user"></i> My dashboard</a>
+      </nav>
+      <button class="btn btn-ghost full" id="logoutBtnAdmin"><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </aside>
+
+    <div class="dash-main">
+      <div class="dash-panel" id="admin-overview">
+        <div class="dash-head"><h1>Platform overview</h1><p>All activity across agriStore Ghana.</p></div>
+        <div class="stat-grid" id="adminStatGrid"></div>
+        <div class="dash-section">
+          <div class="section-head"><h2>Recent bookings</h2></div>
+          <div class="glass" style="overflow-x:auto"><table class="data-table" id="recentAdminTable"></table></div>
+        </div>
+      </div>
+
+      <div class="dash-panel hidden" id="admin-bookings">
+        <div class="dash-head"><h1>All bookings</h1><p>Manage every booking on the platform.</p></div>
+        <div class="glass" style="overflow-x:auto"><table class="data-table" id="bookingsTable"></table></div>
+        <div class="empty-state hidden" id="noBookingsAdmin"><i class="fa-solid fa-inbox"></i><h3>No bookings yet</h3><p>Bookings will appear as users make them.</p></div>
+      </div>
+
+      <div class="dash-panel hidden" id="admin-users">
+        <div class="dash-head"><h1>Registered users</h1><p>All accounts on the platform.</p></div>
+        <div class="glass" style="overflow-x:auto"><table class="data-table" id="usersTable"></table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:0;justify-content:center;text-align:center;flex-direction:column;gap:6px">
+      <span>© <span id="year"></span> agriStore Ghana — Storage for a stronger harvest.</span>
+      <span>🌱 Built for farmers, by farmers.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== BOOKING MODAL ===== -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal glass">
+    <div class="modal-head">
+      <h3 id="bookingTitle"><i class="fa-solid fa-calendar-check"></i> Request booking</h3>
+      <button class="icon-btn" data-close="bookingModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="booking-summary" id="bookingSummary"></div>
+      <form id="bookingForm" class="form">
+        <div class="form-row">
+          <label class="field"><span>Start date</span><input type="date" name="startDate" required></label>
+          <label class="field"><span>End date</span><input type="date" name="endDate" required></label>
+        </div>
+        <label class="field"><span>Quantity (tonnes)</span><input type="number" name="qty" min="1" required placeholder="e.g. 50"></label>
+        <label class="field"><span>Crop type</span>
+          <select name="crop">
+            <option>Maize</option><option>Rice</option><option>Cocoa</option>
+            <option>Cassava</option><option>Groundnut</option><option>Tomato</option><option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span>Notes (optional)</span><textarea name="notes" rows="2" placeholder="Special requirements…"></textarea></label>
+        <div class="auth-error" id="bookingError"></div>
+        <div class="form-footer">
+          <span id="bookingEstimate" class="estimate"></span>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WAREHOUSE DETAIL MODAL (NEW) ===== -->
+<div class="modal-overlay" id="warehouseDetailModal">
+  <div class="modal glass modal-lg">
+    <div class="modal-head">
+      <h3 id="detailTitle"><i class="fa-solid fa-warehouse"></i> Warehouse details</h3>
+      <button class="icon-btn" data-close="warehouseDetailModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" id="detailContent"></div>
+  </div>
+</div>
+
+<!-- ===== BOOKING DETAIL MODAL ===== -->
+<div class="modal-overlay" id="detailModal">
+  <div class="modal glass modal-lg">
+    <div class="modal-head">
+      <h3><i class="fa-solid fa-receipt"></i> Booking details</h3>
+      <button class="icon-btn" data-close="detailModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" id="detailBody"></div>
+  </div>
+</div>
+
+<!-- ===== COMPARE MODAL ===== -->
+<div class="modal-overlay" id="compareModal">
+  <div class="modal glass modal-lg">
+    <div class="modal-head">
+      <h3><i class="fa-solid fa-scale-balanced"></i> Compare warehouses</h3>
+      <button class="icon-btn" data-close="compareModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" id="compareBody"></div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
